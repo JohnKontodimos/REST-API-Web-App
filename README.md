@@ -1,17 +1,3 @@
-<details align="left">
-<summary><img height="34px" align="middle" src="https://img.icons8.com/color/48/000000/great-britain.png"/> English</summary>
-<br>
-
-Coming soon...
-
-    <br><br/>
-    <br><br/>
-</details>
-
-<details open align="left">
-<summary><img height="34px" align="middle" src="https://img.icons8.com/color/48/000000/greece.png"/> Ελληνικά</summary>
-<br>
-
 ## Κατασκευή απλου REST API και Web Εφαρμογής
 
 Εργασία που κατασκευάστηκε στα πλαίσια διδασκαλίας προγραμματισμού διαδικτύου στη σχολή μου. 
@@ -333,6 +319,3 @@ Eφόσον έχετε το WAMP ανοιχτό κάνετε πάλι αριστ
 
 [Ιωάννης Κοντοδήμος](https://github.com/JohnKontodimos)
 
-<br><br/>
-<br><br/>
-</details>
