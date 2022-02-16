@@ -1,0 +1,10 @@
+{
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.5",
+        "php-di/php-di": "^6.3",
+        "firebase/php-jwt": "^5.5",
+        "paragonie/sodium_compat": "^1.17",
+        "tuupola/slim-jwt-auth": "^3.6"
+    }
+}
