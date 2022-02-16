@@ -38,7 +38,7 @@
 
 **Client:** HTML, CSS, JavaScript, [Bootstrap 5](https://getbootstrap.com/), [Leaflet JS](https://leafletjs.com/), OpenStreetMaps, AJAX
 
-**Server:** XAMPP, WAMP, Apache, MySQL, PHP 8.0, [SLIM framework](https://www.slimframework.com/), [firebase/php-jwt](https://github.com/firebase/php-jwt), [tuupola/slim-jwt-auth](https://github.com/tuupola/slim-jwt-auth)
+**Server:** XAMPP, WAMP, Apache, MySQL 8.0.27, PHP 8.0.13, [SLIM framework](https://www.slimframework.com/), [firebase/php-jwt](https://github.com/firebase/php-jwt), [tuupola/slim-jwt-auth](https://github.com/tuupola/slim-jwt-auth)
 
 ## Λειτουργίες
 
@@ -151,6 +151,9 @@
 
 Εάν δεν θέλετε να κάνετε την παραπάνω διαδικασία μία άλλη εναλλακτική είναι το [WAMP](https://sourceforge.net/projects/wampserver/) (Μόνο για windows) καθώς είναι πιο εύρηστο και έχει προεγκατεστημένη την MySQL.
 
+**Σημείωση: Σιγουρευτείτε ότι έχετε PHP έκδοση 8.0.13 και MySQL 8.0.27 για την σωστή λειτουργία της εφαρμογής!! Από το WAMP μπορείτε να την τσεκάρετε κατά την εγκατάσταση.
+Επίσης όταν ανοίγετε το WAMP ή το XAMPP πρέπει να το ανοίγετε σαν διαχειριστής(Admin)!!**
+
 ### XAMPP
 
 Εαν χρησιμοποιείτε XAMPP πηγαίνετε στον φάκελο όπου εγκαταστήσατε το XAMPP και μετά πηγάινετε στο apache\conf\extra και εισάγετε: 
@@ -199,6 +202,8 @@ ServerName localhost
 Εφόσον ολοκληρωθεί κλείνουμε το παράθυρο με το phpMyAdmin. 
 
 ### WAMP
+
+**Σημείωση: Σιγουρευτείτε ότι έχετε PHP έκδοση 8.0.13 και MySQL 8.0.27 για την σωστή λειτουργία της εφαρμογής!! Από το WAMP μπορείτε να την τσεκάρετε κατά την εγκατάσταση. Ελέγξτε έδω: [phpMyAdmin](http://localhost/phpmyadmin/). Εαν δεν έχετε PHP έκδοση 8.0.13, μπορείτε να κάνετε αριστερό κλικ στο εικονίδιο στην γραμμή εργασίων και πηγαίνετε το ποντίκι στη PHP και μετά στο Version και έπειτα κάνετε κλίκ στο 8.0.13.**
 
 Εαν χρησιμοποιείτε WAMP μπορείτε εφόσον το έχετε ήδη ανοιχτό μπορείτε να κάνετε αριστερό κλικ στο εικονίδιο και πηγαίνετε το ποντίκι στο Apache και μετά κάνετε κλικ στο httpd-vhosts.conf (κάτω από Files & Documentation).
 Αυτό θα σας ανοίξει το αρχείο στον επιλεγμένο text editor σας που ορίσατε κατα την διάρκεια της εγκατάστασης του WAMP, έτσι ώστε να μπορεσετε να το επεξεργαστείτε όπως παρακάτω: 
@@ -281,7 +286,6 @@ Eφόσον έχετε το WAMP ανοιχτό κάνετε πάλι αριστ
 127.0.0.1 fuel.gr
 ```
 
-
 ### Τρέξτε το project τοπικά στον υπολογιστή σας
 
 Εφόσον ακολουθήσαμε τα παραπάνω βήματα τώρα μπορούμε να τρέξουμε το project τοπικά στον υπολογιστή μας.
@@ -306,7 +310,7 @@ Eφόσον έχετε το WAMP ανοιχτό κάνετε πάλι αριστ
 
 [http://fuel.gr/](http://fuel.gr/)
 
-**Σημείωση: Σιγουρευτείτε ότι έχετε PHP έκδοση 8.0 και παραπάνω για την σωστή λειτουργία της εφαρμογής!! Δείτε έδω: [phpinfo XAMP](http://localhost/dashboard/phpinfo.php), [phpinfo WAMP](http://localhost/?phpinfo=-1)**
+*Σημείωση: Σιγουρευτείτε ότι έχετε PHP έκδοση 8.0.13 και MySQL 8.0.27 για την σωστή λειτουργία της εφαρμογής!! Δείτε έδω: [phpMyAdmin](http://localhost/phpmyadmin/)*
 
 Για να τεστάρετε τις κλήσεις στο Rest API μπορείτε να χρησιμοποιήσετε λογισμικό όπως το [Postman](https://www.postman.com/downloads/).
 Έπειτα μπορείτε να χρησιμοποιήσετε τις [δοθέντες κλήσεις στο Rest API](#κλήσεις-rest-api).
