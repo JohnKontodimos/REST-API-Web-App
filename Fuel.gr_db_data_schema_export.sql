@@ -66,7 +66,7 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `orderID` int NOT NULL AUTO_INCREMENT,
   `productID` int unsigned NOT NULL,
-  `username` varchar(45) COLLATE utf8mb4 NOT NULL,
+  `username` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `quantity` smallint unsigned NOT NULL,
   `when` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`orderID`),
@@ -99,15 +99,15 @@ CREATE TABLE `pricedata` (
   `gasStationID` smallint unsigned NOT NULL,
   `fuelTypeID` tinyint unsigned NOT NULL,
   `fuelSubTypeID` tinyint unsigned NOT NULL,
-  `fuelNormalName` varchar(64) COLLATE utf8mb4 NOT NULL,
-  `fuelName` varchar(128) COLLATE utf8mb4 NOT NULL,
+  `fuelNormalName` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fuelName` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
   `fuelPrice` decimal(4,3) NOT NULL,
   `dateUpdated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `isPremium` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`productID`),
   UNIQUE KEY `unique_product` (`gasStationID`,`fuelTypeID`,`fuelSubTypeID`),
   CONSTRAINT `fk_pricedata_gasstations` FOREIGN KEY (`gasStationID`) REFERENCES `gasstations` (`gasStationID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=609 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=609 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
