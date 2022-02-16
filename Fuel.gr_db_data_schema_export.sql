@@ -29,21 +29,21 @@ CREATE TABLE `gasstations` (
   `gasStationLat` decimal(10,7) DEFAULT NULL,
   `gasStationLong` decimal(10,7) DEFAULT NULL,
   `fuelCompID` tinyint NOT NULL,
-  `fuelCompNormalName` varchar(45) COLLATE utf8mb4 NOT NULL,
-  `gasStationOwner` varchar(128) COLLATE utf8mb4 NOT NULL,
-  `ddID` varchar(10) COLLATE utf8mb4 NOT NULL,
-  `ddNormalName` varchar(45) COLLATE utf8mb4 NOT NULL,
-  `municipalityID` varchar(10) COLLATE utf8mb4 NOT NULL,
-  `municipalityNormalName` varchar(45) COLLATE utf8mb4 NOT NULL,
-  `countyID` varchar(10) COLLATE utf8mb4 NOT NULL,
-  `countyName` varchar(64) COLLATE utf8mb4 NOT NULL,
-  `gasStationAddress` varchar(255) COLLATE utf8mb4_ DEFAULT NULL,
-  `phone1` char(10) COLLATE utf8mb4 DEFAULT NULL,
-  `username` varchar(45) COLLATE utf8mb4 NOT NULL,
+  `fuelCompNormalName` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gasStationOwner` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ddID` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ddNormalName` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `municipalityID` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `municipalityNormalName` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `countyID` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `countyName` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gasStationAddress` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone1` char(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `username` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`gasStationID`),
   KEY `fk_gasstations_users1_idx` (`username`),
   CONSTRAINT `fk_gasstations_users1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +74,7 @@ CREATE TABLE `orders` (
   KEY `fk_orders_pricedata1_idx` (`productID`),
   CONSTRAINT `fk_orders_pricedata1` FOREIGN KEY (`productID`) REFERENCES `pricedata` (`productID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_orders_users1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,12 +128,12 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `username` varchar(45) COLLATE utf8mb4 NOT NULL,
-  `password` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4 NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4 NOT NULL,
+  `username` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
