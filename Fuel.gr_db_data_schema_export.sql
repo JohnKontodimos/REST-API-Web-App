@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `fuel.gr_db` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8mb4_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `fuel.gr_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `fuel.gr_db`;
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
 --
@@ -23,7 +23,7 @@ USE `fuel.gr_db`;
 
 DROP TABLE IF EXISTS `gasstations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4_unicode_ci */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `gasstations` (
   `gasStationID` smallint unsigned NOT NULL,
   `gasStationLat` decimal(10,7) DEFAULT NULL,
@@ -62,7 +62,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4_unicode_ci */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `orders` (
   `orderID` int NOT NULL AUTO_INCREMENT,
   `productID` int unsigned NOT NULL,
@@ -93,7 +93,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `pricedata`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4_unicode_ci */;
+/*!50503 SET character_set_client = utf8mb4*/;
 CREATE TABLE `pricedata` (
   `productID` int unsigned NOT NULL AUTO_INCREMENT,
   `gasStationID` smallint unsigned NOT NULL,
@@ -126,7 +126,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4_unicode_ci */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `username` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(45) CHARACTER SET utf8 COLLATE utf8mb4_unicode_ci NOT NULL,
